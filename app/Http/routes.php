@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::get('/login', 'Controller@loginsso');
 Route::get('/home', 'Controller@loginredirect');
 Route::get('/logout', 'Controller@logout');
+Route::get('/pengajuanijin/daftar-izin', 'Controller@getdaftarizin');
 
 Route::get('/pengajuanijin', function () {
     return view('action/pengajuanijin/ijin');

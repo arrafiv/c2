@@ -2,7 +2,7 @@
 <header>
 <nav>
     <div class="nav-wrapper white">
-        <a href="#" class="brand-logo"><img src="src/fia_header.png"></a>
+        <a href="#" class="brand-logo"><img src="{{URL::to('src/fia_header.png')}}"></a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="tiny material-icons pink-text text-darken-4">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#"><span class="grey-text text-darken-1">Portal</span></a></li>   
