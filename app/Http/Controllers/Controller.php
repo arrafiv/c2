@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 require '../vendor/autoload.php';
 use SSO\SSO;
+use DB;
 
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
