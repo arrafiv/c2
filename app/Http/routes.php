@@ -22,6 +22,7 @@ Route::get('/logout', 'Controller@logout');
 Route::get('/pengajuanijin', function () {
     return view('action/pengajuanijin/ijin');
 });
+#halaman berisi form create pengajuan [localhost:8000/ijin]
 
 /*
 |--------------------------------------------------------------------------
