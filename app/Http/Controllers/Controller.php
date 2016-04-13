@@ -41,14 +41,17 @@ class Controller extends BaseController
             // 'telepon' => Input::get('telepon'),
             // );
 
+        $bol = SSO::authenticate();
+        $user = SSO::getUser();
+        $usernameSSO  = $user->username;
         $input = $kegiatan->all();
         $nama_kegiatan=$input['nama'];
         $penyelenggara=$input['penyelenggara'];
         $tanggal_mulai_kegiatan=$input['tanggal_mulai_kegiatan'];
         $tanggal_selesai_kegiatan=$input['tanggal_selesai_kegiatan'];
         $deskripsi=$input['deskripsi'];
-        // $email=$input['email'];
-        // $telepon=$input['telp'];
+        $email=$input['email'];
+        $telepon=$input['no_hp'];
 
         // $validasi = array(
         //     'nama_kegiatan' => 'required|min:5',
@@ -68,7 +71,7 @@ class Controller extends BaseController
         //     return Redirect::back()->withErrors($validasi)->withInput();
         // }
 
-        DB::table('kegiatans')->insert(['nama_kegiatan' => $nama_kegiatan, 'penyelenggara' => $penyelenggara, 'tanggal_mulai_kegiatan' => $tanggal_mulai_kegiatan, 'tanggal_selesai_kegiatan' => $tanggal_selesai_kegiatan, 'deskripsi' => $deskripsi]); //terusin
+        DB::table('kegiatans')->insert(['nama_kegiatan' => $nama_kegiatan, 'penyelenggara' => $penyelenggara, 'tanggal_mulai_kegiatan' => $tanggal_mulai_kegiatan, 'tanggal_selesai_kegiatan' => $tanggal_selesai_kegiatan, 'deskripsi' => $deskripsi, 'email' => $email, 'no_hp' => $telepon, 'username' => $usernameSSO, 'status' => "Belum Diproses"]); //terusin
         return view ('action/pengajuanijin/create');
     }
 

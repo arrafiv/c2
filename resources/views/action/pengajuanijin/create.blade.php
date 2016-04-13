@@ -58,7 +58,7 @@
                     <label for="email" data-error="wrong" data-success="right">Email</label>
                 </div>
                 <div class="input-field col s12 l4">
-                    <input id="icon_telephone" name="telp" type="tel" class="validate">
+                    <input id="icon_telephone" name="no_hp" type="tel" class="validate">
                     <label for="icon_telephone">Telephone</label>
                 </div>
             </div>
