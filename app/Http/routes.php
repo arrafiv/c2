@@ -19,10 +19,19 @@ Route::get('/login', 'Controller@loginsso');
 Route::get('/home', 'Controller@loginredirect');
 Route::get('/logout', 'Controller@logout');
 
-Route::get('/pengajuanijin', function () {
-    return view('action/pengajuanijin/ijin');
-});
 #halaman berisi form create pengajuan [localhost:8000/ijin]
+Route::get('/pengajuanijin', 'Controller@getCreateIzin'); 
+Route::post('action/pengajuanijin/create', 'Controller@createizin'); 
+#{return view('action/pengajuanijin/ijin'); });
+
+#Memproses form lalu mengirimnya ke database
+Route::post('/pengajuanijin', function() {
+	return 'Proses Tambah Kegiatan'; });
+
+#Menampilkan Pengajuan Ijin [localhost:8000/read{id}]
+Route::get('/pengajuanijin/read', function() {
+	return 'Halaman Pengajuan Ijin Peruser'; });
+
 
 /*
 |--------------------------------------------------------------------------
